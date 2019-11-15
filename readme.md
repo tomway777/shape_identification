@@ -1,5 +1,11 @@
 #Shape identifier
 
+####Running
+
+    - run (cmd/shell) "pip install -r requirements.txt" on code directory
+    - then run (cmd/shell) -> "python run.py"
+    - access api using curl/postman
+
 
 ####Problem
 Consider a two dimensional co-ordinate system with two 
