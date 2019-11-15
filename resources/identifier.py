@@ -26,9 +26,6 @@ class processing:
 
     def calc(self):
         from flask import jsonify
-        print(self.data['Lines'])
-
-
         #Processing str from request
         ls = []
         for i in self.data['Lines']:
