@@ -39,9 +39,9 @@ class processing:
         for x in ls:
             for item in x:
                 nls.append(item)
-        print(nls)
 
-        print('++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++')
+
+#'++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
         #Shape identifier
         length_list = len(nls)
         comls = []
@@ -120,20 +120,17 @@ class processing:
                 elif len(item) == 5:
                     new_dict['name'] = "Pentagon"
                     new_dict['Vertices'] = item
-                    #print(new_dict)
                     list_dict.append(new_dict.copy())
                     continue
                 elif len(item) == 4:
                     new_dict['name'] = "Quadrilateral"
                     new_dict['Vertices'] = item
-                    #print(new_dict)
                     list_dict.append(new_dict.copy())
                     continue
                 elif len(item) == 3:
                     new_dict['name'] = "Triangle"
                     new_dict['Vertices'] = item
                     list_dict.append(new_dict.copy())
-                    #print(new_dict)
                 else:
                     print(item)
 
