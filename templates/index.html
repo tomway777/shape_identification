@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:600&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-family: 'Oswald', sans-serif;
+        }
+        .box{
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+         <h1>Amilary's homework assignments</h1>
+        <p>
+            <strong>Scope</strong>
+        </p>
+        <ul>
+            <li>- Identifier only recognize 20 numbers of sides polygon</li>
+            <li>- Request body max 10 pair of coordinate and min 2 pair of coordinate</li>
+            <li>- "Lines" : [ "(A1,A2), (B1,B2)" ] --> format coordinate in request</li>
+        </ul>
+        <hr>
+        <p><strong>Run this code :</strong></p>
+        <ul>
+            <li>- run (cmd/shell)  "pip install -r requirements.txt" on code directory</li>
+            <li>- then run (cmd/shell) -> "python run.py" </li>
+            <li>- access api using curl/postman </li>
+        </ul>
+    </div>
+    <hr>
+    <div class="box">
+        <img src="{{url_for('static', filename='postman.jpg')}}">
+    </div>
+
+
+</body>
+</html>

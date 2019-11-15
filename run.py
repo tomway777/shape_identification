@@ -1,4 +1,4 @@
-from flask import Flask, request, escape
+from flask import Flask, request, escape, render_template
 
 def create_app():
     app = Flask(__name__)
@@ -8,9 +8,8 @@ def create_app():
     app.register_blueprint(api_bp, url_prefix='/api')
 
     @app.route('/')
-    def hello():
-        name = request.args.get("name", "World")
-        return f'Hello, {escape(name)}!'
+    def index():
+        return render_template('index.html')
 
     return app
 

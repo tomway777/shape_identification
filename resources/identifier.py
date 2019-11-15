@@ -2,17 +2,27 @@ from flask import request
 from itertools import combinations
 from flask_restful import Resource
 
+'''
+    Class holding logic shape identifier    
+    scope 
+        - Identifier only recognize 20 numbers of sides polygon
+        - Request body max 10 pair of coordinate and min 2 pair of coordinate
+        - "Lines" : [ "(A1,A2), (B1,B2)" ] --> format coordinate in request
+'''
+
+
 class Identifier(Resource):
-    from flask import jsonify
-
+    #when GET request accessed
     def get(self):
-        return {"message" : "hello,world"}
+        return {"message" : "welcome to shape identifier api"}
 
-
+    # when POST request accessed
     def post(self):
-        data = request.get_json()
+        data = request.get_json() #data request
         if not data:
             return {"message" : "No input data provided"}, 400
+
+        #if data exist, call class processing to process request
         ps = processing(data).calc()
         return ps
 
@@ -25,8 +35,8 @@ class processing:
         self.data = data
 
     def calc(self):
-        from flask import jsonify
-        #Processing str from request
+
+        #Processing str from request, split string
         ls = []
         for i in self.data['Lines']:
             ls.append(i.split(', '))
